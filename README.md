@@ -1,2 +1,9 @@
 # scrapy-redis-project
 此项目是基于scrapy-redis框架来爬取百度贴吧所有帖子的内容及回复
+
+其中两个主爬虫程序是tieba-scrapy版本.py和tieba-scrapy-redis版本.py，两者的区别是后者是用redis分布式框架写的，可以在多台客户端跑并将数据统一存储在主服务器的redis数据库中
+
+在两个程序都设置了下载中间件可以在每次请求的时候更换一个User-agent头，其实百度贴吧基本没有反爬机制。。不换也没事
+
+详细的设定请参考setting文件
+
